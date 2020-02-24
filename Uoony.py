@@ -1,6 +1,7 @@
 import discord
 import asyncio
 import random
+import os
 
 client = discord.Client()
 owner_id = 456519752571944980
@@ -100,6 +101,6 @@ async def on_message(message):
         foodresult = foodchoice[foodnumber-1]
         await message.channel.send(foodresult)
 
-
-client.run("NjQxMTk1OTg3NTQ4ODk3MzAx.XcE2YA.RjjpKU2NyLdr3klM29ycdEUMkys")
+access_token = os.environ["BOT_TOKEN"]
+client.run(access_token)
 
